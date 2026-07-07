@@ -1,0 +1,67 @@
+/* ==========================================
+   1. RESET & BASE STYLES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ==========================================
+   2. HERO SECTION
+   ========================================== */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* ==========================================
+   3. SEARCH COMPONENT
+   ========================================== */
+.search-box {
+    background: white;
+    padding: 8px;
+    border-radius: 50px;
+    display: flex;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.search-box input {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    outline: none;
+    width: 250px;
+}
+
+.search-box button {
+    padding: 10px 25px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+    background: #0056b3;
+}
