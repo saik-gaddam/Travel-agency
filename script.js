@@ -60,3 +60,23 @@ const place = urlParams.get('place');
 // Use this 'place' variable to fetch specific images and text from a database or array
 // This keeps your code clean and allows you to add 100+ places without 100+ files!
 document.getElementById("title").innerText = place.replace('-', ' ').toUpperCase();
+
+/**
+ * Carousel Auto-Slide Logic
+ * Automatically scrolls the carousel every 3 seconds
+ */
+const carousel = document.querySelector('.carousel-container');
+
+if (carousel) { // This check prevents errors if the page doesn't have a carousel
+    let scrollAmount = 0;
+    setInterval(() => {
+        carousel.scrollBy({ left: 320, behavior: 'smooth' });
+        scrollAmount += 320;
+        
+        // Reset to start if it reaches the end
+        if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+            carousel.scrollTo({ left: 0, behavior: 'smooth' });
+            scrollAmount = 0;
+        }
+    }, 3000);
+}
