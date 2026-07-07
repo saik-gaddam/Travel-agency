@@ -53,3 +53,10 @@ function viewDetails(placeId) {
     // This stores the ID in browser memory and takes the user to the detail page
     window.location.href = `details.html?place=${placeId}`;
 }
+
+const urlParams = new URLSearchParams(window.location.search);
+const place = urlParams.get('place');
+
+// Use this 'place' variable to fetch specific images and text from a database or array
+// This keeps your code clean and allows you to add 100+ places without 100+ files!
+document.getElementById("title").innerText = place.replace('-', ' ').toUpperCase();
