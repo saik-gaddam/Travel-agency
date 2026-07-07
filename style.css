@@ -97,7 +97,6 @@ body {
 
 /* Each Slide */
 .card {
-    background-color: grey;
     min-width: 300px;
     scroll-snap-align: start;
     border-radius: 15px;
