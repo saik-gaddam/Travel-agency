@@ -48,3 +48,8 @@ function showSuggestions() {
         });
     }
 }
+
+function viewDetails(placeId) {
+    // This stores the ID in browser memory and takes the user to the detail page
+    window.location.href = `details.html?place=${placeId}`;
+}
