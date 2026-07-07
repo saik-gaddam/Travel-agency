@@ -76,3 +76,30 @@ body {
 }
 .suggestion-item { padding: 10px; cursor: pointer; color: #333; }
 .suggestion-item:hover { background-color: #f0f0f0; }
+
+
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scroll */
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-type: x mandatory; /* Makes sliding feel smooth */
+    scrollbar-width: none; /* Hides scrollbar for clean look */
+}
+
+/* Each Slide */
+.card {
+    min-width: 300px;
+    scroll-snap-align: start;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card:hover { transform: scale(1.05); }
+
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card-content { padding: 15px; }
