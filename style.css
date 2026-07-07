@@ -69,6 +69,8 @@ body {
 .search-container { position: relative; width: 300px; margin: 20px auto; }
 #cityInput { width: 100%; padding: 10px; border-radius: 5px; }
 .suggestions-box {  
+    font-family: "Roboto";
+    margin-top: 5px;
     position: absolute; 
     top: 100%;
     left: 0;
@@ -96,6 +98,7 @@ body {
 
 /* Each Slide */
 .card {
+    background-color: grey;
     min-width: 300px;
     scroll-snap-align: start;
     border-radius: 15px;
