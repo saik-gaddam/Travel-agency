@@ -25,3 +25,26 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+
+const cities = ["Delhi", "Mumbai", "Bangalore", "Chennai", "Kolkata", "Ahmedabad", "Hyderabad", "Pune"];
+
+function showSuggestions() {
+    const input = document.getElementById("cityInput").value.toLowerCase();
+    const suggestionsBox = document.getElementById("suggestions");
+    suggestionsBox.innerHTML = ""; // Clear previous results
+
+    if (input.length > 0) {
+        const filtered = cities.filter(city => city.toLowerCase().startsWith(input));
+        
+        filtered.forEach(city => {
+            const div = document.createElement("div");
+            div.classList.add("suggestion-item");
+            div.textContent = city;
+            div.onclick = () => {
+                document.getElementById("cityInput").value = city;
+                suggestionsBox.innerHTML = ""; // Close box after selection
+            };
+            suggestionsBox.appendChild(div);
+        });
+    }
+}
