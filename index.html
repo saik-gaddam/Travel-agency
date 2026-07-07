@@ -11,14 +11,11 @@
     </header>
 
     <section class="hero">
-        <div class="search-container">
-    <input type="text" id="cityInput" placeholder="Search for a city..." onkeyup="showSuggestions()">
-    <div id="suggestions" class="suggestions-box"></div>
-</div>
         <h1 data-aos="fade-up">Find Your Next Escape</h1>
-        <div class="search-box">
-            <input type="text" placeholder="Search destinations...">
+        <div class="search-box search-container">
+            <input type="text" id="cityInput" placeholder="Search for a city..." onkeyup="showSuggestions()">
             <button onclick="book()">Explore</button>
+            <div id="suggestions" class="suggestions-box"></div>
         </div>
         <div class="card" onclick="viewDetails('taj-mahal')">
     <img src="taj.jpg" alt="Taj Mahal">
