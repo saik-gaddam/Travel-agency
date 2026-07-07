@@ -70,7 +70,7 @@ body {
 #cityInput { width: 100%; padding: 10px; border-radius: 5px; }
 .suggestions-box {  
     font-family: "Roboto";
-    margin-top: 5px;
+    margin-top: 15px;
     position: absolute; 
     top: 100%;
     left: 0;
@@ -118,7 +118,7 @@ body {
 }
 
 .rest {
-    color: #888;      /* Lighter gray for the rest of the word */
-    font-weight: 400;
+    color: dark grey;      /* Lighter gray for the rest of the word */
+    font-weight: 200;
 }
 .card-content { padding: 15px; }
