@@ -37,14 +37,24 @@ function showSuggestions() {
         const filtered = cities.filter(city => city.toLowerCase().startsWith(input));
         
         filtered.forEach(city => {
-            const div = document.createElement("div");
-            div.classList.add("suggestion-item");
-            div.textContent = city;
-            div.onclick = () => {
-                document.getElementById("cityInput").value = city;
-                suggestionsBox.innerHTML = ""; // Close box after selection
-            };
-            suggestionsBox.appendChild(div);
+            // Inside your showSuggestions function...
+filtered.forEach(city => {
+    const div = document.createElement("div");
+    div.classList.add("suggestion-item");
+
+    // Split the city name into matched and remaining parts
+    const match = city.substring(0, input.length);
+    const rest = city.substring(input.length);
+
+    // Create the HTML structure: <strong> for the dark part, <span> for the rest
+    div.innerHTML = `<strong class="match">${match}</strong><span class="rest">${rest}</span>`;
+
+    div.onclick = () => {
+        document.getElementById("cityInput").value = city;
+        suggestionsBox.innerHTML = "";
+    };
+    suggestionsBox.appendChild(div);
+});
         });
     }
 }
