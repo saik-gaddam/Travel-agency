@@ -67,7 +67,7 @@ body {
 }
 
 .search-container { position: relative; width: 300px; margin: 20px auto; }
-#cityInput { width: 100%; padding: 10px; }
+#cityInput { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
 .suggestions-box {  
     position: absolute; 
     width: 100%; 
