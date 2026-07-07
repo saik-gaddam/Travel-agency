@@ -65,3 +65,16 @@ body {
 .search-box button:hover {
     background: #0056b3;
 }
+
+.search-container { position: relative; width: 300px; margin: 20px auto; }
+#cityInput { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+.suggestions-box { 
+    border: 1px solid #ccc; 
+    border-top: none; 
+    position: absolute; 
+    width: 100%; 
+    background: white;
+    z-index: 1000;
+}
+.suggestion-item { padding: 10px; cursor: pointer; color: #333; }
+.suggestion-item:hover { background-color: #f0f0f0; }
