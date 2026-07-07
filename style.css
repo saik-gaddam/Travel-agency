@@ -111,4 +111,14 @@ body {
 .card:hover { transform: scale(1.05); }
 
 .card img { width: 100%; height: 200px; object-fit: cover; }
+
+.match {
+    color: #000;      /* Dark/Black for the matched part */
+    font-weight: 700; /* Bold */
+}
+
+.rest {
+    color: #888;      /* Lighter gray for the rest of the word */
+    font-weight: 400;
+}
 .card-content { padding: 15px; }
