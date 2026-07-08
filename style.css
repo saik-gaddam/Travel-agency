@@ -98,7 +98,8 @@ body {
 
 /* Each Slide */
 .card1 {
-    background-image: url('');
+    background-image: url('https://www.istockphoto.com/photo/beautiful-charminar-monument-in-hyderabad-india-gm139385604-478028');
+    backgorund-size: cover;
     min-width: 300px;
     scroll-snap-align: start;
     border-radius: 15px;
@@ -109,7 +110,8 @@ body {
 }
 
 .card2 {
-    background-image: url('');
+    background-image: url('https://unsplash.com/photos/taj-mahal-india-iWMfiInivp4');
+    backgorund-size: cover;
     min-width: 300px;
     scroll-snap-align: start;
     border-radius: 15px;
@@ -120,7 +122,8 @@ body {
 }
 
 .card3 {
-    background-image: url('');
+    background-image: url('https://stock.adobe.com/in/images/shree-dwarkadhish-temple-dwarka-is-believed-to-have-been-the-first-capital-of-gujarat/1255717790');
+    backgorund-size: cover;
     min-width: 300px;
     scroll-snap-align: start;
     border-radius: 15px;
@@ -132,6 +135,7 @@ body {
 
 .card4 {
     background-image: url('https://www.shutterstock.com/shutterstock/photos/1127909567/display_1500/stock-photo-famous-indian-god-temple-named-somnath-mahadev-temple-at-somnath-gujarat-india-1127909567.jpg');
+    backgorund-size: cover;
     min-width: 300px;
     scroll-snap-align: start;
     border-radius: 15px;
