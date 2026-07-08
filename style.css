@@ -102,9 +102,8 @@ body {
 /* Each Slide */
 .card1 {
     background-image: url('https://as2.ftcdn.net/jpg/03/07/60/35/1000_F_307603506_1xaRu2BKg4ChiJepT2cwbm64NB1W6crx.jpg');
-    backgorund-size: cover;
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     scroll-snap-align: start;
     border-radius: 15px;
     overflow: hidden;
@@ -115,9 +114,8 @@ body {
 
 .card2 {
     background-image: url('https://as1.ftcdn.net/jpg/01/30/86/06/1000_F_130860698_oBQfdpO4kdQ6EnMtvnCn90fOrClUvBuZ.jpg');
-    backgorund-size: cover;
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     scroll-snap-align: start;
     border-radius: 15px;
     overflow: hidden;
@@ -128,9 +126,8 @@ body {
 
 .card3 {
     background-image: url('https://as2.ftcdn.net/jpg/03/66/97/47/1000_F_366974762_ezmq3SWW7ATccIL77GWggiBqLzVLmFPH.jpg');
-    backgorund-size: cover;
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     scroll-snap-align: start;
     border-radius: 15px;
     overflow: hidden;
@@ -141,9 +138,8 @@ body {
 
 .card4 {
     background-image: url('https://www.shutterstock.com/shutterstock/photos/1127909567/display_1500/stock-photo-famous-indian-god-temple-named-somnath-mahadev-temple-at-somnath-gujarat-india-1127909567.jpg');
-    backgorund-size: cover;
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     scroll-snap-align: start;
     border-radius: 15px;
     overflow: hidden;
