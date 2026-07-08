@@ -98,7 +98,7 @@ body {
 
 /* Each Slide */
 .card1 {
-    background-image: url('https://www.istockphoto.com/photo/beautiful-charminar-monument-in-hyderabad-india-gm139385604-478028');
+    background-image: url('https://www.istockphoto.com/photo/beautiful-charminar-monument-in-hyderabad-india-gm139385604-478028.jpg');
     backgorund-size: cover;
     scroll-snap-align: start;
     border-radius: 15px;
@@ -109,7 +109,7 @@ body {
 }
 
 .card2 {
-    background-image: url('https://unsplash.com/photos/taj-mahal-india-iWMfiInivp4');
+    background-image: url('https://unsplash.com/photos/taj-mahal-india-iWMfiInivp4.jpg');
     backgorund-size: cover;
     scroll-snap-align: start;
     border-radius: 15px;
@@ -120,7 +120,7 @@ body {
 }
 
 .card3 {
-    background-image: url('https://stock.adobe.com/in/images/shree-dwarkadhish-temple-dwarka-is-believed-to-have-been-the-first-capital-of-gujarat/1255717790');
+    background-image: url('https://stock.adobe.com/in/images/shree-dwarkadhish-temple-dwarka-is-believed-to-have-been-the-first-capital-of-gujarat/1255717790.jpg');
     backgorund-size: cover;
     scroll-snap-align: start;
     border-radius: 15px;
