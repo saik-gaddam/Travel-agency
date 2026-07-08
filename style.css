@@ -143,7 +143,7 @@ body {
 
 .card:hover { transform: scale(1.05); }
 
-.card img { width: 100%; height: 200px; object-fit: cover; }
+.card img { width: 100%; height: 100%; object-fit: cover; }
 
 .match {
     color: black;      /* Dark/Black for the matched part */
