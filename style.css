@@ -167,4 +167,6 @@ body {
     font-weight: 200;
     font-style: italian;
 }
-.card-content { padding: 15px; }
+.card-content { padding: 15px; 
+                text-align: bottom;
+              }
