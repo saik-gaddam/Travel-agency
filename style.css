@@ -172,3 +172,30 @@ body {
                 flex-direction: column;
                 justify-content: end;
               }
+
+.charminar-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery-card {
+  height: 300px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease; /* Smooth zoom */
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery-card:hover {
+  transform: scale(1.05); /* Zoom effect */
+}
+
+/* Assign your image paths here */
+.img1 { background-image: url('images/charminar-main.jpg'); }
+.img2 { background-image: url('images/charminar-arch.jpg'); }
+.img3 { background-image: url('images/charminar-night.jpg'); }
+.img4 { background-image: url('images/charminar-bazaar.jpg'); }
