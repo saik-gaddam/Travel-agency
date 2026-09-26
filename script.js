@@ -86,13 +86,13 @@ function openDetails(destinationKey) {
         
         modalBody.innerHTML = `
             <h2>${data.title}</h2>
-            <img src="${data.image}" alt="${data.title}">
+            <img src="${data.image}" alt="${data.title}" style="width:100%; height:220px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
             <p><strong>Duration:</strong> ${data.duration}</p>
             <p><strong>Price:</strong> ${data.price}</p>
             <p style="margin: 1rem 0;">${data.description}</p>
             <h4 style="color: var(--primary-dark); margin-top: 1rem;">Daily Itinerary:</h4>
-            <ul class="itinerary-list">${itineraryHtml}</ul>
-            <button class="btn" style="width: 100%; margin-top: 1.5rem;" onclick="alert('Booking confirmed for ${data.title}! Our team will contact you shortly.')">Book This Package Now</button>
+            <ul style="margin: 0.5rem 0 1rem 1.2rem; color: var(--text-muted);">${itineraryHtml}</ul>
+            <button class="btn" style="width: 100%; margin-top: 1rem;" onclick="alert('Booking confirmed for ${data.title}! Our team will contact you shortly.')">Book This Package Now</button>
         `;
         
         modal.classList.add('active');
