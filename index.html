@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelLux | Explore the World</title>
+    <title>TravelLux | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,69 +12,69 @@
     <nav>
         <div class="logo">TravelLux</div>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#packages">Packages</a></li>
-            <li><a href="#destinations">Destinations</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="destinations.html#packages">Packages</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="hero">
-        <h1>Discover Your Next Adventure</h1>
-        <p>Explore breathtaking destinations, custom tour packages, and unforgettable experiences tailored just for you.</p>
+    <header class="hero">
+        <h1>Explore The Extraordinary</h1>
+        <p>Embark on handcrafted journeys across the globe with unmatched luxury and comfort.</p>
         
         <div class="search-container">
             <div class="search-box">
-                <input type="text" id="destination-input" placeholder="Where do you want to go?" onkeyup="showSuggestions()">
-                <button type="button" class="search-btn">Search</button>
+                <input type="text" id="home-search" placeholder="Search dream destinations...">
+                <button type="button" onclick="handleSearch()">Explore</button>
             </div>
-            <!-- Autocomplete suggestions dropdown -->
-            <div id="suggestions" class="suggestions-box"></div>
         </div>
     </header>
 
-    <!-- Tour Packages Section -->
-    <section id="packages" class="packages-section">
-        <h2>Featured Tour Packages</h2>
-        <div class="packages-grid">
-            
-            <div class="package-card">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Beach Paradise">
-                <div class="package-content">
-                    <h3>Tropical Bali Getaway</h3>
-                    <p>Experience pristine beaches, cultural temples, and luxury resorts with our all-inclusive Bali package.</p>
-                    <button class="btn-details" onclick="viewDetails('bali-getaway')">View Details</button>
+    <!-- Featured Section -->
+    <section class="container">
+        <h2 class="section-title">Featured Highlights</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Bali">
+                </div>
+                <div class="card-body">
+                    <h3>Tropical Bali Paradise</h3>
+                    <p>Immerse yourself in pristine white sands, emerald waters, and vibrant culture.</p>
+                    <a href="destinations.html" class="btn">Discover More</a>
                 </div>
             </div>
 
-            <div class="package-card">
-                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="European Adventure">
-                <div class="package-content">
-                    <h3>Romantic Paris & Alps</h3>
-                    <p>Stroll through the streets of Paris and experience breathtaking alpine views across Switzerland.</p>
-                    <button class="btn-details" onclick="viewDetails('paris-alps')">View Details</button>
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Europe">
+                </div>
+                <div class="card-body">
+                    <h3>European Grand Tour</h3>
+                    <p>Travel through romantic Parisian boulevards and majestic Swiss Alps.</p>
+                    <a href="destinations.html" class="btn">Discover More</a>
                 </div>
             </div>
 
-            <div class="package-card">
-                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Desert Safari">
-                <div class="package-content">
-                    <h3>Dubai Luxury Escape</h3>
-                    <p>Indulge in world-class shopping, modern architecture, and thrilling desert safaris.</p>
-                    <button class="btn-details" onclick="viewDetails('dubai-escape')">View Details</button>
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai">
+                </div>
+                <div class="card-body">
+                    <h3>Dubai Skyline & Safari</h3>
+                    <p>Experience ultra-modern architecture paired with thrilling golden dune adventures.</p>
+                    <a href="destinations.html" class="btn">Discover More</a>
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
-        <p>&copy; 2026 TravelLux Agency. All rights reserved. Built with passion for travelers.</p>
+    <footer>
+        <p>&copy; 2026 TravelLux Agency. Crafted for unforgettable journeys.</p>
     </footer>
 
-    <!-- Script File -->
     <script src="script.js"></script>
 </body>
 </html>
