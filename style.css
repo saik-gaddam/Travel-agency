@@ -1,201 +1,259 @@
 /* ==========================================
-   1. RESET & BASE STYLES
-   ========================================== */
+   TravelLux Design System & Modern Styling
+   ================================---------- */
+
+:root {
+    --primary: #0077b6;
+    --primary-dark: #03045e;
+    --secondary: #00b4d8;
+    --accent: #90e0ef;
+    --bg-light: #f8f9fa;
+    --text-dark: #212529;
+    --text-muted: #6c757d;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --radius: 12px;
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
     line-height: 1.6;
-    color: #333;
 }
 
-/* ==========================================
-   2. HERO SECTION
-   ========================================== */
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+/* Hero Section */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
+    color: var(--white);
+    padding: 0 1rem;
 }
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-/* ==========================================
-   3. SEARCH COMPONENT
-   ========================================== */
-.margin {
-   margin-top: 30px;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+/* Search Box Container */
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
 }
 
 .search-box {
-    background: white;
-    padding: 8px;
-    border-radius: 50px;
     display: flex;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background: var(--white);
+    padding: 6px;
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+    width: 100%;
 }
 
 .search-box input {
+    flex: 1;
     border: none;
-    padding: 10px 20px;
-    border-radius: 50px;
+    padding: 12px 20px;
+    font-size: 1rem;
     outline: none;
-    width: 250px;
+    border-radius: 50px 0 0 50px;
 }
 
 .search-box button {
-    padding: 10px 25px;
-    background: #007bff;
-    color: white;
+    background: var(--primary);
+    color: var(--white);
     border: none;
+    padding: 10px 25px;
     border-radius: 50px;
     cursor: pointer;
+    font-weight: 600;
     transition: background 0.3s ease;
 }
 
 .search-box button:hover {
-    background: #0056b3;
+    background: var(--primary-dark);
 }
 
-.search-container { position: relative; width: 300px; margin: 20px auto; }
-#cityInput { width: 100%; padding: 10px; border-radius: 5px; }
-.suggestions-box {  
-    margin-top: 10px;
-    position: absolute; 
+/* Autocomplete Suggestions Box */
+.suggestions-box {
+    position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%; 
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    border-top: none;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    left: 20px;
+    right: 20px;
+    background: var(--white);
+    border-radius: 0 0 10px 10px;
+    box-shadow: var(--shadow);
+    z-index: 50;
+    overflow: hidden;
 }
-.suggestion-item { padding: 10px; cursor: pointer; color: #333; }
-.suggestion-item:hover { background-color: #f0f0f0; }
 
+.suggestion-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--bg-light);
+    transition: background 0.2s;
+}
 
-/* Carousel Container */
+.suggestion-item:hover {
+    background: var(--bg-light);
+}
+
+/* Packages Grid Layout */
+.packages-section {
+    padding: 5rem 5%;
+}
+
+.packages-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--primary-dark);
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.package-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.package-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.package-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+}
+
+.package-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.btn-details {
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-details:hover {
+    background: var(--primary);
+}
+
+/* Carousel Section */
 .carousel-container {
     display: flex;
-    overflow-x: auto; /* Enables horizontal scroll */
-    gap: 20px;
-    padding: 20px;
-    scroll-snap-type: x mandatory; /* Makes sliding feel smooth */
-    scrollbar-width: none; /* Hides scrollbar for clean look */
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    scrollbar-width: none; /* Firefox */
 }
 
-/* Each Slide */
-.card1 {
-    background-image: url('https://as2.ftcdn.net/jpg/03/07/60/35/1000_F_307603506_1xaRu2BKg4ChiJepT2cwbm64NB1W6crx.jpg');
-    object-fit: cover;
-    height: 300px;
-    width: 300px;
-    scroll-snap-align: start;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    cursor: pointer;
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
-.card2 {
-    background-image: url('https://as1.ftcdn.net/jpg/01/30/86/06/1000_F_130860698_oBQfdpO4kdQ6EnMtvnCn90fOrClUvBuZ.jpg');
-    object-fit: cover;
-    height: 300px;
-    width: 300px;
-    scroll-snap-align: start;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    cursor: pointer;
+/* Footer */
+footer {
+    background: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 4rem;
 }
 
-.card3 {
-    background-image: url('https://as2.ftcdn.net/jpg/03/66/97/47/1000_F_366974762_ezmq3SWW7ATccIL77GWggiBqLzVLmFPH.jpg');
-    object-fit: cover;
-    height: 300px;
-    width: 300px;
-    scroll-snap-align: start;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    cursor: pointer;
+footer p {
+    font-size: 0.9rem;
+    color: var(--accent);
 }
-
-.card4 {
-    background-image: url('https://www.shutterstock.com/shutterstock/photos/1127909567/display_1500/stock-photo-famous-indian-god-temple-named-somnath-mahadev-temple-at-somnath-gujarat-india-1127909567.jpg');
-    object-fit: cover;
-    height: 300px;
-    width: 300px;
-    scroll-snap-align: start;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    cursor: pointer;
-}
-
-.card:hover { transform: scale(1.05); }
-
-.card img { width: 100%; height: 100%; object-fit: cover; }
-
-.match {
-    color: black;      /* Dark/Black for the matched part */
-    font-weight: bold;
-    font-family: "Roboto";
-}
-
-.rest {
-    color: grey;      /* Lighter gray for the rest of the word */
-    font-weight: 200;
-    font-style: italian;
-}
-.card-content { padding: 15px; 
-                display: flex;
-                flex-direction: column;
-                justify-content: end;
-              }
-
-.charminar-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 15px;
-  padding: 20px;
-}
-
-.gallery-card {
-  height: 300px;
-  border-radius: 12px;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease; /* Smooth zoom */
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.gallery-card:hover {
-  transform: scale(1.05); /* Zoom effect */
-}
-
-/* Assign your image paths here */
-.img1 { background-image: url('images/charminar-main.jpg'); }
-.img2 { background-image: url('images/charminar-arch.jpg'); }
-.img3 { background-image: url('images/charminar-night.jpg'); }
-.img4 { background-image: url('images/charminar-bazaar.jpg'); }
