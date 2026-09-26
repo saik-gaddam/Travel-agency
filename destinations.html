@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelLux | Destinations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">TravelLux</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html" class="active">Destinations</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" style="height: 50vh;">
+        <h1>Explore All Destinations</h1>
+        <p>Click on any destination package to view complete itinerary, pricing, and resort details.</p>
+    </header>
+
+    <section class="container">
+        <h2 class="section-title">Available Tour Packages</h2>
+        
+        <div class="grid" id="package-grid">
+            
+            <!-- Card 1 -->
+            <div class="card" data-id="bali">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali">
+                </div>
+                <div class="card-body">
+                    <h3>Tropical Bali Getaway</h3>
+                    <p>7 Days / 6 Nights — Beach resorts, private pool villas, and cultural temple tours.</p>
+                    <button class="btn" onclick="openDetails('bali')">View Details & Itinerary</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card" data-id="paris">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Paris">
+                </div>
+                <div class="card-body">
+                    <h3>Romantic Paris & Alps</h3>
+                    <p>10 Days / 9 Nights — Guided city walks, Eiffel Tower dinners, and Swiss alpine railway.</p>
+                    <button class="btn" onclick="openDetails('paris')">View Details & Itinerary</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card" data-id="dubai">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai">
+                </div>
+                <div class="card-body">
+                    <h3>Dubai Luxury Escape</h3>
+                    <p>5 Days / 4 Nights — Burj Khalifa VIP entry, yacht cruise, and desert safari dinner.</p>
+                    <button class="btn" onclick="openDetails('dubai')">View Details & Itinerary</button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card" data-id="tokyo">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80" alt="Tokyo">
+                </div>
+                <div class="card-body">
+                    <h3>Tokyo Neon & Tradition</h3>
+                    <p>8 Days / 7 Nights — Bullet train pass, historic temples, and authentic sushi masterclass.</p>
+                    <button class="btn" onclick="openDetails('tokyo')">View Details & Itinerary</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Expanded Detail Modal Popup -->
+    <div id="detail-modal" class="modal-overlay" onclick="closeDetails(event)">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModalBtn()">&times;</button>
+            <div class="modal-content" id="modal-body-content">
+                <!-- Populated dynamically by script.js -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter / X</a>
+            <a href="https://youtube.com" target="_blank">YouTube</a>
+        </div>
+        <p>&copy; 2026 TravelLux Agency. Crafted for unforgettable journeys.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
