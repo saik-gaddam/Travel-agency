@@ -8,31 +8,43 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
     <nav>
         <div class="logo">TravelLux</div>
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="destinations.html#packages">Packages</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero">
         <h1>Explore The Extraordinary</h1>
-        <p>Embark on handcrafted journeys across the globe with unmatched luxury and comfort.</p>
+        <p>Embark on handcrafted journeys across the globe with unmatched luxury, expert guides, and unforgettable experiences.</p>
         
         <div class="search-container">
             <div class="search-box">
-                <input type="text" id="home-search" placeholder="Search dream destinations...">
-                <button type="button" onclick="handleSearch()">Explore</button>
+                <input type="text" id="home-search" placeholder="Search dream destinations (e.g. Bali, Paris)...">
+                <button type="button" onclick="handleHomeSearch()">Explore</button>
             </div>
         </div>
     </header>
 
-    <!-- Featured Section -->
     <section class="container">
+        <div class="features-banner">
+            <div class="feature-item">
+                <h3>15K+</h3>
+                <p>Happy Travelers</p>
+            </div>
+            <div class="feature-item">
+                <h3>50+</h3>
+                <p>Exotic Destinations</p>
+            </div>
+            <div class="feature-item">
+                <h3>24/7</h3>
+                <p>Concierge Support</p>
+            </div>
+        </div>
+
         <h2 class="section-title">Featured Highlights</h2>
         <div class="grid">
             <div class="card">
@@ -42,7 +54,7 @@
                 <div class="card-body">
                     <h3>Tropical Bali Paradise</h3>
                     <p>Immerse yourself in pristine white sands, emerald waters, and vibrant culture.</p>
-                    <a href="destinations.html" class="btn">Discover More</a>
+                    <a href="destinations.html" class="btn">Explore All Destinations</a>
                 </div>
             </div>
 
@@ -53,7 +65,7 @@
                 <div class="card-body">
                     <h3>European Grand Tour</h3>
                     <p>Travel through romantic Parisian boulevards and majestic Swiss Alps.</p>
-                    <a href="destinations.html" class="btn">Discover More</a>
+                    <a href="destinations.html" class="btn">Explore All Destinations</a>
                 </div>
             </div>
 
@@ -64,14 +76,19 @@
                 <div class="card-body">
                     <h3>Dubai Skyline & Safari</h3>
                     <p>Experience ultra-modern architecture paired with thrilling golden dune adventures.</p>
-                    <a href="destinations.html" class="btn">Discover More</a>
+                    <a href="destinations.html" class="btn">Explore All Destinations</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <footer id="contact">
+        <div class="social-links">
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter / X</a>
+            <a href="https://youtube.com" target="_blank">YouTube</a>
+        </div>
         <p>&copy; 2026 TravelLux Agency. Crafted for unforgettable journeys.</p>
     </footer>
 
